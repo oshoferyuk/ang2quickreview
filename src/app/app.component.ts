@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  @ViewChild("localR") inputER: ElementRef;
+  
+  onTestHandler(params){
+	  console.log(params);
+  }
+  
+  passLocalRHandler(localR:HTMLInputElement){
+	  console.log(localR.value);
+	  console.log(this.inputER.nativeElement.value);
+  }
 }
