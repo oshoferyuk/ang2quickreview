@@ -11,8 +11,11 @@
 <input type="text" size="40" #localR>
 <button (click)="passLocalRHandler(localR)">click me</button>
 <hr/>
-<app-servers *ngFor="let i of [{serverId:23,serverName:'Apache',activated:true},{serverId:53,serverName:'NgX',activated:false}]; let indx = index" [info]="i" (serverEE)="onTestHandler($event)">
+<app-servers [name]="myname" *ngFor="let i of [{serverId:23,serverName:'Apache',activated:true},{serverId:53,serverName:'NgX',activated:false}]; let indx = index" [info]="i" (serverEE)="onTestHandler($event)">
 
  **INSIDE {{indx}}
+ <div #contentR>this is content child element</div>
 </app-servers>
-
+<hr/>
+<app-numbers>
+</app-numbers>
