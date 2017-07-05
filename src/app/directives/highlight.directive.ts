@@ -1,11 +1,12 @@
-import { Directive, ElementRef, OnInit, Renderer2, HostListener, HostBinding } from '@angular/core';
+import { Directive, ElementRef, OnInit, Renderer2, HostListener, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective implements OnInit{
 	@HostBinding('style.color') highLightColor:string;
-	
+	//could ba aliased by highLightColor - @Input('highLightColor') and then in html: use <div [highLightColor]="'red'"...
+	@Input() defaultColor: string = 'blue';
 	@HostListener('mouseenter') mouseenter(eventData: Event){
 		this.renderer2.setStyle(this.elementRef.nativeElement,'background-color','green');
 	}
@@ -17,7 +18,7 @@ export class HighlightDirective implements OnInit{
   constructor(private elementRef: ElementRef, private renderer2: Renderer2) { }
 
 	ngOnInit(){
-		this.highLightColor = 'lime';
+		this.highLightColor = this.defaultColor;
 		//console.log('ngOnInit directive');
 		//this.elementRef.nativeElement.style.color = 'blue';
 		//this.renderer2.setStyle(this.elementRef.nativeElement,'background-color','green');

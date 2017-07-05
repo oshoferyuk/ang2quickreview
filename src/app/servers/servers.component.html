@@ -1,6 +1,7 @@
 <hr>
 {{info.serverId}} - {{ info.serverName}} - {{info.activated}}
 <button (click)="changeServerName()">click me</button>
-<div appHighlight>this is appHighlight directive</div>
+<div appHighlight [defaultColor] = "'lime'">this is appHighlight directive</div>
+<div appHighlight defaultColor = "lime">this is appHighlight directive</div>
 <ng-content></ng-content>
 
