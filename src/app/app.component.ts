@@ -8,13 +8,17 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class AppComponent {
   title = 'app';
   @ViewChild("localR") inputER: ElementRef;
+  myname:string = "bob";
+  
   
   onTestHandler(params){
 	  console.log(params);
+	  this.myname = "tom";
   }
   
   passLocalRHandler(localR:HTMLInputElement){
 	  console.log(localR.value);
 	  console.log(this.inputER.nativeElement.value);
+	  
   }
 }

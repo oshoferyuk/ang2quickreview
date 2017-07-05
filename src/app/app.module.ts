@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
+import { NumbersComponent } from './numbers/numbers.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServersComponent
+    ServersComponent,
+    NumbersComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,9 @@
+<b>Numbers</b>
+<button (click)="setClickStrategy(1)">All</button>
+<button (click)="setClickStrategy(NUMBERSTRATEGY.ODD)">ODD</button>
+<button (click)="setClickStrategy(3)">EVEN</button>
+<div *ngFor="let n of getList()">
+	<div [ngClass]="{odd:listStrategy === 1}" 
+		 [ngStyle]="{'background-color':listStrategy === NUMBERSTRATEGY.EVEN?'yellow':'transparent'}"
+		 [innerText]="n"></div>
+</div>
