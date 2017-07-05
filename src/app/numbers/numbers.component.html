@@ -7,3 +7,13 @@
 		 [ngStyle]="{'background-color':listStrategy === NUMBERSTRATEGY.EVEN?'yellow':'transparent'}"
 		 [innerText]="n"></div>
 </div>
+
+<br/>
+<ng-template [ngIf]="showNgTemplate">
+structural directive without *
+</ng-template>
+
+
+<div *appStars>
+<div id="test">test</div>
+</div>
