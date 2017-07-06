@@ -1,9 +1,12 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { GoodsService } from './services/goods.service';
+import {LogginService} from './services/logging.service';	
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [LogginService,GoodsService]
 })
 export class AppComponent {
   title = 'app';
