@@ -32,7 +32,7 @@ export class ServersComponent implements OnInit, OnChanges, DoCheck, AfterConten
   }
   
   alertInfo(info:string){
-	  alert(info);
+	  //alert(info);
   }
   
   ngOnChanges(changes: SimpleChanges){

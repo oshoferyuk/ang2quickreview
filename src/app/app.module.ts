@@ -6,6 +6,8 @@ import { ServersComponent } from './servers/servers.component';
 import { NumbersComponent } from './numbers/numbers.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { StarsDirective } from './directives/stars.directive';
+import { routing } from './app.routing';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { StarsDirective } from './directives/stars.directive';
     ServersComponent,
     NumbersComponent,
     HighlightDirective,
-    StarsDirective
+    StarsDirective,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+	routing
   ],
   providers: [],
   bootstrap: [AppComponent]
