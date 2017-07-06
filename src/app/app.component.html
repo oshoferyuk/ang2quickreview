@@ -18,7 +18,8 @@
 </app-numbers>
 <br/>
 <h2>END OF TEMPLATE PAGE</h2>
-<a routerLink="/">root</a>
-<a [routerLink]="['/help']">help</a>
+
+<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">home</a> |
+<a routerLink="/help" routerLinkActive="active">help</a>
 
 <router-outlet></router-outlet>
