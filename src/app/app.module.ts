@@ -8,6 +8,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { StarsDirective } from './directives/stars.directive';
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     NumbersComponent,
     HighlightDirective,
     StarsDirective,
-    HomeComponent
+    HomeComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
