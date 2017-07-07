@@ -13,8 +13,20 @@ export class UsersComponent implements OnInit {
   ngOnInit() {
 	//console.log('params: ', this.route.snapshot.params['id']);
 	this.route.params.subscribe((params: Params) => {
-		console.log('params2: ', params['id']);
+		console.log('params: ');
+		console.dir(params);
 	});
+	
+	this.route.queryParams.subscribe((params: Params) => {
+		console.log('queryParams');
+		console.dir(params);
+	});
+  
+	this.route.fragment.subscribe((params) => {
+		console.log('fragment');
+		console.dir(params);
+	});
+  
   }
   
   onNavigate(){
