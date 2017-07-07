@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -8,12 +8,16 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class UsersComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
 	//console.log('params: ', this.route.snapshot.params['id']);
 	this.route.params.subscribe((params: Params) => {
 		console.log('params2: ', params['id']);
 	});
+  }
+  
+  onNavigate(){
+	  this.router.navigate(['/users',23,'edit'],{queryParams:{a:23,b:'test'},fragment:'loaging'});
   }
 }
