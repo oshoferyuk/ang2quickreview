@@ -9,30 +9,23 @@ import { UsersService } from '../services/users.service';
 })
 export class UsersComponent implements OnInit {
 
+	usersData:any[] = [];
+	currentItem:string = '';
   constructor(private route: ActivatedRoute, private router: Router, private usersService: UsersService) { }
 
   ngOnInit() {
 	
 	
 	//console.log('params: ', this.route.snapshot.params['id']);
-	this.route.params.subscribe((params: Params) => {
-		console.log('params: ');
-		console.dir(params);
+	this.route.params.subscribe(params => {	
 		
-		if(params['id'] == 1000){
-			
-			this.usersService.getFirst2User().subscribe((userData)=>{
-			
-			console.log('yyyyyyyy222');
-			console.log(userData);
-		})
-		}else{
-			this.usersService.getUsers().subscribe((userData)=>{
-				console.log('yyyyyyyy');
-				console.log(userData);
-			})	
-			
+		if(params && params['id']){
+			this.currentItem = params['id'];
 		}
+			
+			this.usersService.getFirst2User().subscribe((usersData)=>{					
+				this.usersData = usersData;			
+		})
 		
 		
 	});

@@ -21,5 +21,14 @@ export class UsersService {
   getFirst2User(){
 	  return this.ss.getUsers().take(2);
   }
+  
+  getUserDetail(userId:number, getDataCb){
+	  
+	  this.ss.getUsers().subscribe(p => {
+		  getDataCb(p[userId]);
+	  });
+	  
+	  //return {street:"test street" + userId };
+  }
 
 }

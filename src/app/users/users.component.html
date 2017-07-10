@@ -1,7 +1,13 @@
-<p>
-  users works!
-</p>
-<a [routerLink]="['/users',752901]"> user 752901</a>
+List of users
+<ul>
+<li *ngFor="let user of usersData; let i = index;">
+<app-user [user]="user" [currentIndex]="currentItem"></app-user>
+</li>
+</ul>
 
+
+
+
+<a [routerLink]="['/users',752901]"> user 752901</a>
 <a [routerLink]="['/users',23425,'edit']" [queryParams]="{a:23,b:'test'}" fragment="loading"href="#">user 23425 with queryParams</a>
 <button (click)="onNavigate()">navigate</button>

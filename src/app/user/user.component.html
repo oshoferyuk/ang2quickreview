@@ -1,0 +1,13 @@
+<div class="info">
+<div>
+{{userInfo.name}} - {{userInfo.username}} - {{userInfo.email}}
+</div>
+<div>
+	<a [routerLink]="['/users', userInfo.id, 'detail']" href="#">details</a>
+	<a [routerLink]="['/users', userInfo.id, 'edit']" href="#">edit</a>
+</div>
+
+<div *ngIf="currentIndex == userInfo.id">
+	<router-outlet></router-outlet>
+</div>
+
