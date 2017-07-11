@@ -18,6 +18,6 @@ export class RegisterComponent implements OnInit {
 	onSubmit(form: NgForm){
 		console.dir(form.value);
 		//we can access form early before submiting by accessing:
-		console.dir(this.registerForm.value);
+		console.dir(this.registerForm.valid);
 	}
 }
