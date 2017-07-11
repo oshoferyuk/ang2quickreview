@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
 	@ViewChild('f') registerForm: NgForm;
+	answer:string;
 	
   constructor() { }
 
