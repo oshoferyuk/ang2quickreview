@@ -1,3 +1,25 @@
-<p>
-  help works!
-</p>
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker *ngFor="let p of points" [latitude]="p.lat" [longitude]="p.lng"></agm-marker>
+</agm-map>
+
+<div class = "panel panel-default">
+   <div class = "panel-body">
+      <form>
+		<label>Location</label>
+		<input type="text" name="markerName">
+		
+		<label>Latitude</label>
+		<input type="text" name="markerLat">
+		
+		<label>Longitude</label>
+		<input type="text" name="markerLng">		
+	  
+		<input type="submit" value="MapIt!" (click)="onMapIt($event)">
+		
+	  </form>
+   </div>
+</div>
+
+<div style="width:80%;height:800px;margin-left:30px;">
+<angular2-fullcalendar [options]="calendarOptions"></angular2-fullcalendar>
+</div>
