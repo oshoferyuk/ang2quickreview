@@ -11,7 +11,7 @@ export class RegisterComponent implements OnInit {
   @ViewChild('f') registerForm: NgForm;
   answer: string;
   genders = ['male', 'female'];
-
+  userName: string = 'super bob';
   constructor() { }
 
   ngOnInit() {
@@ -21,5 +21,24 @@ export class RegisterComponent implements OnInit {
     console.dir(form.value);
 		// we can access form early before submiting by accessing
     console.dir(this.registerForm.valid);
+  }
+
+  suggestUserName() {
+    // Set several items at once using setValue, need provide all fields
+    // this.registerForm.setValue({
+    //   userDataGroup: {
+    //     username: 'bob',
+    //     email: 'bob@we.re'
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: '',
+    //   gender: 'male'
+    // });
+
+    this.registerForm.form.patchValue({
+      userDataGroup: {
+        username: this.userName
+      }
+    })
   }
 }
