@@ -8,17 +8,17 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-	@ViewChild('f') registerForm: NgForm;
-	answer:string;
-	
+  @ViewChild('f') registerForm: NgForm;
+  answer: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-	onSubmit(form: NgForm){
-		console.dir(form.value);
-		//we can access form early before submiting by accessing:
-		console.dir(this.registerForm.valid);
-	}
+  onSubmit(form: NgForm) {
+    console.dir(form.value);
+		// we can access form early before submiting by accessing
+    console.dir(this.registerForm.valid);
+  }
 }
