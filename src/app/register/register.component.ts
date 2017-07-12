@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
     console.dir(form.value);
 		// we can access form early before submiting by accessing
     console.dir(this.registerForm.valid);
+    this.registerForm.reset();
   }
 
   suggestUserName() {

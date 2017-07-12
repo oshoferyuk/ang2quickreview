@@ -10,7 +10,7 @@ export class NumbersComponent implements OnInit {
   list: number[] = [1, 2, 3, 4, 5];
   listStrategy: NumberStrategy = NumberStrategy.All;
   NUMBERSTRATEGY = NumberStrategy;
-  showNgTemplate: bool = true;
+  showNgTemplate: boolean = true;
 
   constructor() { }
 
