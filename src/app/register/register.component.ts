@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   @ViewChild('f') registerForm: NgForm;
-  answer: string;
+  answer: string = '';
   genders = ['male', 'female'];
   userName: string = 'super bob';
   constructor() { }
